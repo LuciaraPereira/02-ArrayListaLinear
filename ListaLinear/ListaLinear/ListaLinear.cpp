@@ -1,4 +1,4 @@
-// Claudio Souza Nunes
+  // Claudio Souza Nunes
 
 #include <iostream>
 using namespace std;
@@ -16,6 +16,7 @@ void buscarElemento();
 const int MAX = 5;
 int lista[MAX]{};
 int nElementos = 0;
+
 
 
 int main()
@@ -105,5 +106,21 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	int elementoBuscado = 0;
+	int inexistente = 0;
 
-}
+	cout << "Digite o elemento que voce quer buscar: ";
+	cin >> elementoBuscado;
+
+	for (int n = 0; n < nElementos; n++) {
+		if ( elementoBuscado == lista[n]) {
+			cout << "O elemento buscado esta na posicao: " << n << endl;
+			inexistente++;
+		}
+	}
+
+	if (inexistente == 0) {
+		cout << "O elemento informado nao existe" << endl;
+	}
+
+} 
